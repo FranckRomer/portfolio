@@ -1,0 +1,89 @@
+.Porfolio {
+    /* max-height: calc(100vh - 10rem);
+    min-height: calc(100vh - 10rem); */
+    height: 80vh;
+    display: flex;
+    margin: 5rem 10%;
+    border-radius: 10px;
+    padding: 0 .3rem 0 1rem;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    animation: born 2s;
+}
+
+.main {
+    margin-left: 3rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* *------------------------------------------------- */
+@keyframes born {
+    from {
+        opacity: 0;
+        /* width: 4.4rem; */
+    }
+
+    to {
+        opacity: 1;
+        /* width: auto; */
+    }
+}
+
+/* ------------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+    .Porfolio {
+        min-height: 100vh;
+        margin: 0 ;
+        border: none;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .Porfolio {
+        border-color: aliceblue;
+        background-color: black;
+        /* background-color: #181818; */
+    }
+    /* .main{
+        overflow: auto;
+    } */
+}
+
+
+
+
+/* -------------------------------------------------------- */
+.main::-webkit-scrollbar {
+    width: .3rem;
+    /* width of the entire scrollbar */
+}
+
+.main::-webkit-scrollbar-track {
+    background: white;
+    /* color of the tracking area */
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: black;
+    /* color of the scroll thumb */
+    border-radius: .5rem;
+    /* roundness of the scroll thumb */
+    border: 1px solid rgb(70, 70, 70);
+    /* creates padding around scroll thumb */
+}
+
+@media (prefers-color-scheme: dark) {
+    .main::-webkit-scrollbar-track {
+        background: black;
+    }
+
+    .main::-webkit-scrollbar-thumb {
+        background-color: aliceblue;
+    }
+
+}

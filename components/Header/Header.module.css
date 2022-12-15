@@ -1,0 +1,156 @@
+.header {
+    width: 3rem;
+    /* min-height: calc(100% - 10.1rem);
+    height: auto; */
+    height: 79vh;
+    display: grid;
+    border-right: 1px solid black;
+    padding: 1rem 2rem 1rem 0;
+    position: absolute;
+    overflow: hidden;
+    transition: width 600ms;
+    background-color: whitesmoke;
+    z-index: 1;
+}
+
+
+.linea {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+
+.logo,
+.link,
+.select {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.info {
+    margin-left: 1.5rem;
+    /* display: none; */
+}
+
+.info h3 {
+    color: #30bbf2;
+    border-bottom: 1px solid #30bbf2;
+}
+
+.info p {
+    color: #f2496a;
+}
+
+.info h4 {
+    color: black;
+    transition: color 170ms;
+}
+
+.link:hover h4 {
+    color: #f2496a;
+}
+
+
+.header:hover {
+    /* width: 14.5rem; */
+    width: 180px;
+    /* width: 100%; */
+}
+
+.header:hover .info {
+    /* display: block; */
+    animation: fade-in 1.5s;
+    /* animation-delay: 100ms; */
+    /* animation-delay: 1s; */
+}
+
+
+
+/* .header:not(:hover) .info.did-fade-in {
+    animation: fade-out 1s;
+} */
+
+
+/* ------------------------------------------------------- */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        /* width: 4.4rem; */
+    }
+
+    to {
+        opacity: 1;
+        /* width: auto; */
+    }
+}
+
+/* ------------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+
+    .logo,
+    .social,
+    .linea,
+    .info {
+        display: none;
+    }
+
+    .header {
+        border: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: calc(100% - 1rem);
+        height: auto;
+        min-height: auto;
+        border-top: 1px solid aliceblue;
+        position: fixed;
+        bottom: -1rem;
+        left: 0;
+        margin: 1rem;
+    }
+
+    .header:hover {
+        width: calc(100% - 2rem);
+    }
+
+    .link,
+    .select {
+        display: block;
+        text-align: center;
+    }
+
+    /* .info{
+        margin: 0;
+    } */
+}
+
+
+/* ------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    .header {
+        border-color: aliceblue;
+        background-color: black;
+        /* background-color: #181818; */
+    }
+
+    .header img {
+        filter: invert();
+    }
+
+    .linea {
+        background-color: aliceblue;
+    }
+
+    .info h4 {
+        color: aliceblue;
+    }
+}
+
+.select img {
+    filter: invert(0.90) sepia(1) hue-rotate(99deg) saturate(1000%);
+}
+
+.social img {
+    filter: none;
+}
