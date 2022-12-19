@@ -26,19 +26,21 @@
         opacity: 0;
         /* width: 4.4rem; */
     }
-
+    
     to {
         opacity: 1;
         /* width: auto; */
     }
 }
 
+/* *------------------------------------------------- */
 /* ------------------------------------------------------- */
 @media only screen and (max-width: 600px) {
     .Porfolio {
         min-height: 100vh;
         margin: 0 ;
         border: none;
+        border-radius: 0px;
     }
 
     .main {
