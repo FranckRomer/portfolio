@@ -18,6 +18,27 @@ a {
   box-sizing: border-box;
 }
 
+/* *-------------------------------------- */
+/* -------------------------------------------------------- */
+body::-webkit-scrollbar {
+  width: .4rem;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: silver;
+  /* color of the scroll thumb */
+  border-radius: .5rem;
+  /* roundness of the scroll thumb */
+  border: 1px solid rgb(70, 70, 70);
+  /* creates padding around scroll thumb */
+}
+/* *-------------------------------------- */
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

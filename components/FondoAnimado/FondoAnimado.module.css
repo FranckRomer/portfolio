@@ -1,0 +1,125 @@
+.Fondo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    /* background-image: linear-gradient(160deg, #f3999a 0%, #80D0C7 100%); */
+
+    z-index: -2;
+}
+
+.burbuja {
+    border-radius: 50%;
+    background-color: aliceblue;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 0;
+    animation: burbujas 3s linear infinite;
+    /* animation-delay: 3s;< */
+}
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 14s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 14%;
+    animation-duration: 10s;
+}
+
+.burbuja:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    left: 29%;
+    animation-duration: 7s;
+}
+
+.burbuja:nth-child(4) {
+    width: 60px;
+    height: 60px;
+    left: 36%;
+    animation-duration: 13s;
+    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.burbuja:nth-child(5) {
+    width: 47px;
+    height: 47px;
+    left: 47%;
+    animation-duration: 9s;
+}
+
+.burbuja:nth-child(6) {
+    width: 80px;
+    height: 80px;
+    left: 54%;
+    animation-duration: 11s;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.burbuja:nth-child(7) {
+    width: 80px;
+    height: 80px;
+    left: 69%;
+    animation-duration: 6s;
+}
+
+.burbuja:nth-child(8) {
+    width: 80px;
+    height: 80px;
+    left: 78%;
+    animation-duration: 14s;
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.burbuja:nth-child(9) {
+    width: 80px;
+    height: 80px;
+    left: 88%;
+    animation-duration: 8s;
+}
+
+@keyframes burbujas {
+    0% {
+        bottom: -50;
+        opacity: 0;
+    }
+
+    30% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        opacity: .8;
+    }
+
+    74% {
+        transform: translateX(-30px);
+        opacity: .4;
+    }
+
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .Fondo {
+        background-color: #0093E9;
+        background-image: linear-gradient(160deg, #0093E9 0%, black 100%);
+        /* background-image: linear-gradient(160deg, #f3999a 0%, black 100%); */
+
+    }
+
+}

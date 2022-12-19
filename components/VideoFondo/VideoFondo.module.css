@@ -1,0 +1,25 @@
+.Video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.Video video {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+
+/* *--------------------------------------- */
+@media (max-width: 1400px) {
+    .Video video {
+        width: auto;
+        height: 100%;
+        
+    }
+}
+

@@ -3,7 +3,11 @@ import styles from './HomeCom.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const HomeComponent = () => {
+const HomeComponent = (props:any) => {
+    const pageReturn = (pageReturn:string) =>{
+        console.log(pageReturn);
+        props.pageReturn(pageReturn)
+    }
     return (
         <div className={styles.Home}>
 
@@ -125,12 +129,19 @@ const HomeComponent = () => {
                         <div className={styles.skills_img}>
                             <Image src="/icons/github.png" alt="GitHub" width={50} height={50} />
                             <Image src="/skills/matlab.png" alt="Matlab" width={50} height={50} />
-                            <Image src="/skills/python.png" alt="Python" width={50} height={50} />
+                            {/* <Image src="/skills/python.png" alt="Python" width={50} height={50} /> */}
                             <Image src="/skills/ubuntu.png" alt="Ubuntu" width={50} height={50} />
                         </div>
                     </div>
                 </div>
 
+            </div>
+            {/* ---------------------------- */}
+            <div className={styles.linea}></div>
+            <div className={styles.goProjects}>
+                <h1>Proyectos Realizados</h1>
+                <button onClick={()=>pageReturn("projects")}>Proyectos</button>
+                {/* <Link href={"/portfolio"}>Proyectos</Link> */}
             </div>
 
 
