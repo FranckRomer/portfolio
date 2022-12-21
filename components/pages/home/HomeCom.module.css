@@ -1,5 +1,6 @@
 .Home {
     min-width: 100%;
+    width: 100%;
     max-height: calc(100vh - 10rem);
     animation: born 2s;
 }
@@ -11,8 +12,8 @@
 }
 
 .next {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: auto;
     display: block;
     justify-content: center;
     align-items: center;
@@ -112,6 +113,7 @@
 
 .About {
     display: grid;
+    gap: 1rem;
     height: auto;
     grid-template-columns: 30% 70%;
 
@@ -134,8 +136,8 @@
 .img_about {
     margin: 1rem;
     position: 2;
-    width: 100%;
-    height: 50vh;
+    width: 95%;
+    height: 40vh;
     background-image: url("../../../public/fondos/fondo_iot.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -176,29 +178,31 @@
 .goProjects div{
     display: grid;
     gap: 1rem;
-    grid-auto-rows: 10rem;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    margin: 2rem auto;
+    /* grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); */
+    align-items: center;    
     justify-content: center;
 }
 .goProjects p{
     margin: 1rem 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: justify;
 }
 .goProjects button{
     background-color: transparent;
-    /* border: 0; */
-    /* width: 10rem; */
+    border: 0;
+    width: 10rem;
     height: 5rem;
-    margin: 1rem 5rem; 
     font-size: 1.2rem;
-    border-radius: 10px;
-    transition: background .5s;
+    text-align: center;
+    margin: 1rem auto;
+    border-bottom: 1px solid #f2496a;
+    color: #f2496a;
+    transition: all .5s;
 }
 .goProjects button:hover{
-    background-color: #30bbf2;
-    color: aliceblue;
+    border-bottom: 1px solid #30bbf2;
+    color: #30bbf2;
 }
 /* *------------------------------------------------- */
 @keyframes born {

@@ -2,9 +2,11 @@ import React from 'react'
 import styles from './HomeCom.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import Router, { useRouter } from "next/router";
 
 const HomeComponent = (props: any) => {
     const pageReturn = (pageReturn: string) => {
+        Router.push("/portfolio#welcome");
         console.log(pageReturn);
         props.pageReturn(pageReturn)
     }
@@ -47,7 +49,7 @@ const HomeComponent = (props: any) => {
                         width={30}
                         height={30}
                     />
-                    Hacerca de mi
+                    <p>Hacerca de mi</p>
                 </a>
             </div>
 
@@ -62,7 +64,7 @@ const HomeComponent = (props: any) => {
                         width={30}
                         height={30}
                     />
-                    Inicio
+                    <p>Inicio</p>
                 </a>
 
                 <section className={styles.About}>
@@ -83,7 +85,7 @@ const HomeComponent = (props: any) => {
                         width={30}
                         height={30}
                     />
-                    Habilidades
+                    <p>Habilidades</p>
                 </a>
             </div>
             {/* ------------------------------------------- */}
@@ -97,7 +99,7 @@ const HomeComponent = (props: any) => {
                         width={30}
                         height={30}
                     />
-                    Hacerca de mi
+                    <p>Hacerca de mi</p>
                 </a>
 
                 <div className={styles.skills}>
@@ -208,7 +210,7 @@ const HomeComponent = (props: any) => {
                         width={30}
                         height={30}
                     />
-                    Proyectos
+                    <p>Proyectos</p>
                 </a>
 
             </div>
@@ -222,13 +224,13 @@ const HomeComponent = (props: any) => {
                         width={30}
                         height={30}
                     />
-                    Inicio
+                    <p>Inicio</p>
                 </a>
                 <div className={styles.goProjects} >
                     <h1>Proyectos Realizados</h1>
                     <hr />
                     <div>
-                        <p>Hecha un vistaso a mis proyectos que he realizado a lo largo del tiempo</p>
+                        <p>Hecha un vistaso a mis proyectos </p>
                         <button onClick={() => pageReturn("projects")}>PROYECTOS</button>
                     </div>
                     {/* <Link href={"/portfolio"}>Proyectos</Link> */}
